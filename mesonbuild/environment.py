@@ -1382,6 +1382,18 @@ class MachineInfo:
         """
         return self.system in ('darwin', 'ios')
 
+    def is_macos(self):
+        """
+        Machine is macOS (not iOS)
+        """
+        return self.system == 'darwin'
+
+    def is_ios(self):
+        """
+        Machine is iOS (not macOS)
+        """
+        return self.system == 'ios'
+
     def is_android(self):
         """
         Machine is Android?
