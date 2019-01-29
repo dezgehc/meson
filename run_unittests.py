@@ -3843,6 +3843,7 @@ class DarwinTests(BasePlatformTests):
         self.assertIsNotNone(m, msg=out)
         return m.groups()
 
+    @skipIfNoPkgconfig
     def test_library_versioning(self):
         '''
         Ensure that compatibility_version and current_version are set correctly
